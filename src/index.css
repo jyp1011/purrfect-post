@@ -2,39 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* PawConnect Design System - Warm, Pet-Friendly Colors */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* PawConnect Brand Colors */
+    --background: 35 25% 96%; /* Warm beige background */
+    --foreground: 25 15% 25%; /* Warm dark text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 25 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Soft coral primary */
+    --primary: 12 85% 70%; /* Soft coral */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 12 85% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Mint green secondary */
+    --secondary: 155 40% 80%; /* Mint green */
+    --secondary-foreground: 25 15% 25%;
+    --secondary-hover: 155 40% 75%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 90%; /* Warm muted */
+    --muted-foreground: 25 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Mint accent */
+    --accent: 155 40% 80%;
+    --accent-foreground: 25 15% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%; /* Warm border */
+    --input: 35 20% 92%; /* Warm input background */
+    --ring: 12 85% 70%; /* Coral focus ring */
+
+    /* Custom PawConnect gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(35 25% 96%), hsl(45 30% 98%));
+    --gradient-coral: linear-gradient(135deg, hsl(12 85% 70%), hsl(25 80% 75%));
+    --gradient-mint: linear-gradient(135deg, hsl(155 40% 80%), hsl(165 45% 85%));
+    
+    /* Shadows with coral tint */
+    --shadow-warm: 0 4px 20px hsl(12 85% 70% / 0.1);
+    --shadow-coral: 0 8px 30px hsl(12 85% 70% / 0.2);
+    --shadow-mint: 0 4px 20px hsl(155 40% 80% / 0.15);
 
     --radius: 0.5rem;
 
@@ -100,6 +116,38 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+    font-family: 'Open Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', system-ui, sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-coral {
+    background: var(--gradient-coral);
+  }
+  
+  .gradient-mint {
+    background: var(--gradient-mint);
+  }
+  
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+  
+  .shadow-coral {
+    box-shadow: var(--shadow-coral);
+  }
+  
+  .shadow-mint {
+    box-shadow: var(--shadow-mint);
   }
 }
