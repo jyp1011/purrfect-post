@@ -68,8 +68,8 @@ const Index = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
           </nav>
           <div className="flex items-center gap-3">
-            <Button variant="outline">Sign In</Button>
-            <Button variant="hero">Join Now</Button>
+            <Button variant="outline" onClick={() => window.location.href = '/auth'}>Sign In</Button>
+            <Button variant="hero" onClick={() => window.location.href = '/auth'}>Join Now</Button>
           </div>
         </div>
       </header>
@@ -91,7 +91,7 @@ const Index = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="hero" className="text-lg px-8 py-6">
+            <Button size="lg" variant="hero" className="text-lg px-8 py-6" onClick={() => window.location.href = '/auth'}>
               <Camera className="mr-2 h-5 w-5" />
               Start Sharing
             </Button>
@@ -153,7 +153,7 @@ const Index = () => {
           <p className="text-xl text-muted-foreground">
             Start sharing your pet's story today and become part of our loving community
           </p>
-          <Button size="lg" variant="hero" className="text-lg px-12 py-6">
+          <Button size="lg" variant="hero" className="text-lg px-12 py-6" onClick={() => window.location.href = '/auth'}>
             Get Started Now
           </Button>
         </div>
