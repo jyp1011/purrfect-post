@@ -41,11 +41,51 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     try {
-      // For now, show welcome message with empty posts
-      // The database relationship will be fixed when users start creating content
-      setPosts([]);
+      const { data: posts, error } = await supabase
+        .from('posts')
+        .select(`
+          id,
+          caption,
+          likes_count,
+          comments_count,
+          created_at,
+          user_id,
+          post_images (
+            image_url
+          )
+        `)
+        .order('created_at', { ascending: false })
+        .limit(50);
+
+      if (error) {
+        console.error('Error fetching posts:', error);
+        setPosts([]);
+        return;
+      }
+
+      // Fetch profiles separately to avoid relationship issues
+      const userIds = [...new Set(posts?.map(post => post.user_id) || [])];
+      const { data: profiles } = await supabase
+        .from('profiles')
+        .select('user_id, username, display_name, pet_name')
+        .in('user_id', userIds);
+
+      // Create a map of profiles by user_id
+      const profileMap = new Map();
+      profiles?.forEach(profile => {
+        profileMap.set(profile.user_id, profile);
+      });
+
+      // Merge posts with profiles
+      const postsWithProfiles = posts?.map(post => ({
+        ...post,
+        profiles: profileMap.get(post.user_id) || null
+      })) || [];
+
+      setPosts(postsWithProfiles);
     } catch (error) {
       console.error('Error fetching posts:', error);
+      setPosts([]);
     } finally {
       setLoading(false);
     }
