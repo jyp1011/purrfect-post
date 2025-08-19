@@ -1,0 +1,236 @@
+-- Insert 15 dummy user profiles
+INSERT INTO profiles (user_id, username, display_name, pet_name, pet_breed, bio, avatar_url) VALUES
+-- Generate 15 realistic pet owners
+('550e8400-e29b-41d4-a716-446655440001', 'fluffy_lover', 'Emma Johnson', 'Fluffy', 'Golden Retriever', 'Dog mom who loves adventures and treats! 🐕', 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=150'),
+('550e8400-e29b-41d4-a716-446655440002', 'whiskers_dad', 'Mike Chen', 'Whiskers', 'Maine Coon', 'Cat dad to the fluffiest boy in town 🐱', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150'),
+('550e8400-e29b-41d4-a716-446655440003', 'bunny_mama', 'Sarah Williams', 'Cocoa', 'Holland Lop', 'Rabbit parent and veggie garden enthusiast 🐰', 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150'),
+('550e8400-e29b-41d4-a716-446655440004', 'paws_and_play', 'David Rodriguez', 'Luna', 'Border Collie', 'Training tricks and having fun every day! 🎾', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150'),
+('550e8400-e29b-41d4-a716-446655440005', 'kitty_queen', 'Jessica Brown', 'Princess', 'Persian', 'My cat rules the house and I am just the staff 👑', 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150'),
+('550e8400-e29b-41d4-a716-446655440006', 'doggy_adventures', 'Alex Thompson', 'Max', 'Labrador', 'Hiking buddy and best friend for life 🥾', 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150'),
+('550e8400-e29b-41d4-a716-446655440007', 'pet_photographer', 'Lisa Garcia', 'Buddy', 'Beagle', 'Professional pet photographer with my model 📸', 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150'),
+('550e8400-e29b-41d4-a716-446655440008', 'furry_friend', 'Tom Wilson', 'Milo', 'French Bulldog', 'City dog with a big personality 🏙️', 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150'),
+('550e8400-e29b-41d4-a716-446655440009', 'happy_tails', 'Amanda Davis', 'Bella', 'Poodle', 'Groomer by day, dog mom always 💅', 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=150'),
+('550e8400-e29b-41d4-a716-446655440010', 'pet_lover_101', 'Chris Martinez', 'Charlie', 'Husky', 'Adventure seeker with my snow dog ❄️', 'https://images.unsplash.com/photo-1507592078677-c806a131f2c2?w=150'),
+('550e8400-e29b-41d4-a716-446655440011', 'cuddle_buddy', 'Rachel White', 'Olive', 'Cavalier King Charles', 'Snuggles and Netflix every night 🛋️', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150'),
+('550e8400-e29b-41d4-a716-446655440012', 'park_runner', 'Kevin Lee', 'Dash', 'Greyhound', 'Fast dog, slow human, perfect match 🏃‍♂️', 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150'),
+('550e8400-e29b-41d4-a716-446655440013', 'tiny_paws', 'Nina Johnson', 'Peanut', 'Chihuahua', 'Small dog, big attitude, endless love 💕', 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150'),
+('550e8400-e29b-41d4-a716-446655440014', 'nature_pup', 'Jake Miller', 'Scout', 'Australian Shepherd', 'Exploring trails with my adventure buddy 🌲', 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=150'),
+('550e8400-e29b-41d4-a716-446655440015', 'rescue_mama', 'Sophie Taylor', 'Hope', 'Mixed Breed', 'Rescued is my favorite breed ❤️', 'https://images.unsplash.com/photo-1502767089025-6572583495f1?w=150');
+
+-- Insert posts for each user (12-15 posts per user)
+INSERT INTO posts (id, user_id, caption, likes_count, comments_count) VALUES
+-- User 1 (fluffy_lover) posts
+('post-1-1', '550e8400-e29b-41d4-a716-446655440001', 'Morning walk with my best friend! Fluffy loves the sunrise 🌅', 23, 5),
+('post-1-2', '550e8400-e29b-41d4-a716-446655440001', 'Treat time! Look at that happy face 😍', 45, 8),
+('post-1-3', '550e8400-e29b-41d4-a716-446655440001', 'Beach day vibes with Fluffy! She loves the sand between her toes', 67, 12),
+('post-1-4', '550e8400-e29b-41d4-a716-446655440001', 'Training session complete! Fluffy nailed the sit-stay command 🏆', 34, 6),
+('post-1-5', '550e8400-e29b-41d4-a716-446655440001', 'Cozy evening snuggles on the couch 🛋️', 78, 15),
+('post-1-6', '550e8400-e29b-41d4-a716-446655440001', 'Fluffy made a new friend at the dog park today!', 56, 9),
+('post-1-7', '550e8400-e29b-41d4-a716-446655440001', 'Rainy day indoor activities - puzzle toys are the best!', 29, 4),
+('post-1-8', '550e8400-e29b-41d4-a716-446655440001', 'Hiking adventure with my golden girl 🥾', 89, 18),
+('post-1-9', '550e8400-e29b-41d4-a716-446655440001', 'Fluffy s first swimming lesson - she s a natural! 🏊‍♀️', 92, 21),
+('post-1-10', '550e8400-e29b-41d4-a716-446655440001', 'Professional grooming day - looking fabulous! ✨', 71, 13),
+('post-1-11', '550e8400-e29b-41d4-a716-446655440001', 'Dinner time excitement! Fluffy knows the sound of the food bowl', 38, 7),
+('post-1-12', '550e8400-e29b-41d4-a716-446655440001', 'Sleepy Sunday vibes with my furry companion 😴', 64, 11),
+
+-- User 2 (whiskers_dad) posts  
+('post-2-1', '550e8400-e29b-41d4-a716-446655440002', 'Whiskers found the perfect sunspot for his afternoon nap ☀️', 41, 7),
+('post-2-2', '550e8400-e29b-41d4-a716-446655440002', 'That face when you open a can of tuna 🐟', 85, 16),
+('post-2-3', '550e8400-e29b-41d4-a716-446655440002', 'Whiskers vs. the red dot - an eternal battle 🔴', 73, 14),
+('post-2-4', '550e8400-e29b-41d4-a716-446655440002', 'My office supervisor is very hands-on today 💻', 52, 9),
+('post-2-5', '550e8400-e29b-41d4-a716-446655440002', 'Whiskers discovered the catnip garden... chaos ensued', 96, 23),
+('post-2-6', '550e8400-e29b-41d4-a716-446655440002', 'Professional bread loaf position achieved 🍞', 68, 12),
+('post-2-7', '550e8400-e29b-41d4-a716-446655440002', 'Window watching is serious business for Maine Coons', 34, 5),
+('post-2-8', '550e8400-e29b-41d4-a716-446655440002', 'Whiskers modeling his new collar like a boss 😎', 59, 10),
+('post-2-9', '550e8400-e29b-41d4-a716-446655440002', 'Midnight zoomies around the house! Who needs sleep anyway?', 47, 8),
+('post-2-10', '550e8400-e29b-41d4-a716-446655440002', 'Whiskers helping me work from home (by sitting on my keyboard)', 81, 17),
+('post-2-11', '550e8400-e29b-41d4-a716-446655440002', 'Bath day drama - the betrayal in his eyes! 🛁', 103, 25),
+('post-2-12', '550e8400-e29b-41d4-a716-446655440002', 'Whiskers and his favorite cardboard box fort 📦', 76, 13),
+
+-- User 3 (bunny_mama) posts
+('post-3-1', '550e8400-e29b-41d4-a716-446655440003', 'Cocoa exploring the garden - fresh herbs are her favorite! 🌿', 28, 4),
+('post-3-2', '550e8400-e29b-41d4-a716-446655440003', 'Binky time! Nothing makes me happier than seeing Cocoa hop with joy', 54, 9),
+('post-3-3', '550e8400-e29b-41d4-a716-446655440003', 'Cocoa s morning routine: stretch, yawn, demand breakfast 🥕', 32, 6),
+('post-3-4', '550e8400-e29b-41d4-a716-446655440003', 'Building a cardboard castle for my Holland Lop princess 🏰', 67, 11),
+('post-3-5', '550e8400-e29b-41d4-a716-446655440003', 'Cocoa discovered the hay feeder refill - it s Christmas morning!', 43, 7),
+('post-3-6', '550e8400-e29b-41d4-a716-446655440003', 'Bunny grooming session - those ears need daily attention ✨', 39, 5),
+('post-3-7', '550e8400-e29b-41d4-a716-446655440003', 'Cocoa s favorite spot: under the dining room table 🏠', 25, 3),
+('post-3-8', '550e8400-e29b-41d4-a716-446655440003', 'Training Cocoa to come when called - progress is slow but steady', 31, 4),
+('post-3-9', '550e8400-e29b-41d4-a716-446655440003', 'Cocoa met a wild rabbit through the fence today! 🐰', 58, 10),
+('post-3-10', '550e8400-e29b-41d4-a716-446655440003', 'Pellet time is the best time according to Cocoa', 36, 6),
+('post-3-11', '550e8400-e29b-41d4-a716-446655440003', 'Cocoa s disapproving look when I m late with dinner', 49, 8),
+('post-3-12', '550e8400-e29b-41d4-a716-446655440003', 'Indoor obstacle course for rainy day entertainment 🏃‍♀️', 44, 7),
+
+-- User 4 (paws_and_play) posts
+('post-4-1', '550e8400-e29b-41d4-a716-446655440004', 'Luna mastered the new agility course! This border collie amazes me daily 🏆', 87, 16),
+('post-4-2', '550e8400-e29b-41d4-a716-446655440004', 'Frisbee practice in the backyard - Luna s focus is incredible', 63, 11),
+('post-4-3', '550e8400-e29b-41d4-a716-446655440004', 'That intense border collie stare when she wants to play fetch 👁️', 94, 19),
+('post-4-4', '550e8400-e29b-41d4-a716-446655440004', 'Luna herding the neighbor s kids at the park (gently, of course!)', 78, 14),
+('post-4-5', '550e8400-e29b-41d4-a716-446655440004', 'Mental stimulation day: puzzle feeders and treat dispensers', 45, 8),
+('post-4-6', '550e8400-e29b-41d4-a716-446655440004', 'Luna s muddy paws after our trail run - worth every bath! 🛁', 56, 9),
+('post-4-7', '550e8400-e29b-41d4-a716-446655440004', 'Teaching Luna to balance treats on her nose - patience level: expert', 72, 13),
+('post-4-8', '550e8400-e29b-41d4-a716-446655440004', 'Border collie energy at 6 AM... who needs coffee? ☕', 89, 17),
+('post-4-9', '550e8400-e29b-41d4-a716-446655440004', 'Luna helping me garden by supervising every plant I move 🌱', 41, 6),
+('post-4-10', '550e8400-e29b-41d4-a716-446655440004', 'Dock diving practice - Luna s first 15-foot jump! 🏊‍♀️', 101, 22),
+('post-4-11', '550e8400-e29b-41d4-a716-446655440004', 'Luna s collection of tennis balls is getting out of hand 🎾', 67, 12),
+('post-4-12', '550e8400-e29b-41d4-a716-446655440004', 'Rainy day training: 20 new tricks learned indoors!', 58, 10),
+
+-- User 5 (kitty_queen) posts
+('post-5-1', '550e8400-e29b-41d4-a716-446655440005', 'Princess demands her throne (my favorite chair) be available at all times 👑', 71, 14),
+('post-5-2', '550e8400-e29b-41d4-a716-446655440005', 'Daily brushing ritual - Princess tolerates it for the treats', 48, 8),
+('post-5-3', '550e8400-e29b-41d4-a716-446655440005', 'That Persian face when you dare to move while she s on your lap', 85, 16),
+('post-5-4', '550e8400-e29b-41d4-a716-446655440005', 'Princess discovered the heated cat bed - I may never see her again', 92, 18),
+('post-5-5', '550e8400-e29b-41d4-a716-446655440005', 'Salmon dinner was approved by Her Royal Highness 🐟', 63, 11),
+('post-5-6', '550e8400-e29b-41d4-a716-446655440005', 'Princess vs. the automatic vacuum - she won (obviously)', 104, 23),
+('post-5-7', '550e8400-e29b-41d4-a716-446655440005', 'Morning routine: Princess inspects my coffee preparation ☕', 39, 6),
+('post-5-8', '550e8400-e29b-41d4-a716-446655440005', 'Princess modeling her diamond collar like the queen she is ✨', 87, 15),
+('post-5-9', '550e8400-e29b-41d4-a716-446655440005', 'The royal nap continues... it s been 14 hours 😴', 56, 9),
+('post-5-10', '550e8400-e29b-41d4-a716-446655440005', 'Princess allows me to pet her for exactly 3.5 minutes daily', 73, 13),
+('post-5-11', '550e8400-e29b-41d4-a716-446655440005', 'Vet visit drama - Princess was NOT amused 🏥', 98, 21),
+('post-5-12', '550e8400-e29b-41d4-a716-446655440005', 'Princess s reaction to the new kitten next door... territorial much?', 81, 17);
+
+-- Continue with remaining users (6-15) with 12 posts each...
+INSERT INTO posts (id, user_id, caption, likes_count, comments_count) VALUES
+-- User 6 (doggy_adventures) - Max the Labrador
+('post-6-1', '550e8400-e29b-41d4-a716-446655440006', 'Max s first mountain summit! 3,000 feet of pure determination 🏔️', 112, 24),
+('post-6-2', '550e8400-e29b-41d4-a716-446655440006', 'Lake swimming session - Max thinks he s part fish 🐠', 68, 12),
+('post-6-3', '550e8400-e29b-41d4-a716-446655440006', 'Trail mix break (Max gets the dog-friendly version) 🥜', 34, 5),
+('post-6-4', '550e8400-e29b-41d4-a716-446655440006', 'Max carrying his own water bowl on the hike - such a good boy!', 87, 16),
+('post-6-5', '550e8400-e29b-41d4-a716-446655440006', 'Camping setup: Max has already claimed the best spot in the tent ⛺', 59, 10),
+('post-6-6', '550e8400-e29b-41d4-a716-446655440006', 'Max meeting wild deer on the trail - patience training in action 🦌', 95, 19),
+('post-6-7', '550e8400-e29b-41d4-a716-446655440006', 'Post-hike muddy paws and the biggest smile 😊', 73, 13),
+('post-6-8', '550e8400-e29b-41d4-a716-446655440006', 'Max s hiking gear check: backpack, booties, and enthusiasm ✅', 41, 7),
+('post-6-9', '550e8400-e29b-41d4-a716-446655440006', '6 AM wake-up call for our weekend adventure - Max is ready!', 52, 8),
+('post-6-10', '550e8400-e29b-41d4-a716-446655440006', 'Max found a stick. It s not just any stick - it s THE stick 🪵', 76, 14),
+('post-6-11', '550e8400-e29b-41d4-a716-446655440006', 'Waterfall discovery! Max approves of this rest stop 💦', 89, 17),
+('post-6-12', '550e8400-e29b-41d4-a716-446655440006', 'Max s adventure journal: 50 miles hiked this month! 📖', 64, 11),
+
+-- User 7 (pet_photographer) - Buddy the Beagle  
+('post-7-1', '550e8400-e29b-41d4-a716-446655440007', 'Behind the scenes: Buddy modeling for today s pet portrait session 📸', 93, 18),
+('post-7-2', '550e8400-e29b-41d4-a716-446655440007', 'Buddy s nose always finds the treats I hide for photo sessions 👃', 47, 8),
+('post-7-3', '550e8400-e29b-41d4-a716-446655440007', 'Golden hour magic with my favorite four-legged assistant ✨', 108, 22),
+('post-7-4', '550e8400-e29b-41d4-a716-446655440007', 'Buddy photobombing another client s session - professional help! 📷', 85, 15),
+('post-7-5', '550e8400-e29b-41d4-a716-446655440007', 'Studio setup day: Buddy quality-tests every prop and backdrop', 36, 6),
+('post-7-6', '550e8400-e29b-41d4-a716-446655440007', 'Buddy s reaction when he realizes he s the model today 🎭', 72, 13),
+('post-7-7', '550e8400-e29b-41d4-a716-446655440007', 'Teaching a photography workshop - Buddy demonstrates perfect posing', 58, 10),
+('post-7-8', '550e8400-e29b-41d4-a716-446655440007', 'Buddy s portfolio is more impressive than most human models 📖', 91, 19),
+('post-7-9', '550e8400-e29b-41d4-a716-446655440007', 'Equipment assistant Buddy knows exactly which lens I need 🔍', 44, 7),
+('post-7-10', '550e8400-e29b-41d4-a716-446655440007', 'Buddy meeting his biggest fan at the pet expo today! 🐕', 67, 12),
+('post-7-11', '550e8400-e29b-41d4-a716-446655440007', 'Buddy s first magazine cover shoot - he s going professional! 📰', 119, 26),
+('post-7-12', '550e8400-e29b-41d4-a716-446655440007', 'End of the day cuddles with my business partner and best friend 🤗', 82, 16);
+
+-- Continue with remaining users...
+INSERT INTO posts (id, user_id, caption, likes_count, comments_count) VALUES
+-- User 8 (furry_friend) - Milo the French Bulldog
+('post-8-1', '550e8400-e29b-41d4-a716-446655440008', 'Milo s big city adventure: conquering the busy sidewalks! 🏙️', 78, 14),
+('post-8-2', '550e8400-e29b-41d4-a716-446655440008', 'That Frenchie face when the elevator is taking too long 😤', 95, 19),
+('post-8-3', '550e8400-e29b-41d4-a716-446655440008', 'Milo making friends at the dog-friendly coffee shop ☕', 52, 9),
+('post-8-4', '550e8400-e29b-41d4-a716-446655440008', 'City park exploration: Milo vs. the pigeons 🐦', 83, 16),
+('post-8-5', '550e8400-e29b-41d4-a716-446655440008', 'Milo s morning commute: riding the subway like a pro 🚇', 107, 23),
+('post-8-6', '550e8400-e29b-41d4-a716-446655440008', 'Rooftop terrace time - Milo surveys his urban kingdom', 61, 11),
+('post-8-7', '550e8400-e29b-41d4-a716-446655440008', 'Milo s favorite food truck knows his order by heart 🌭', 73, 13),
+('post-8-8', '550e8400-e29b-41d4-a716-446655440008', 'Apartment living: Milo has mastered the art of the indoor zoomies', 89, 17),
+('post-8-9', '550e8400-e29b-41d4-a716-446655440008', 'Milo meeting his reflection in the shiny building windows 🪟', 45, 7),
+('post-8-10', '550e8400-e29b-41d4-a716-446655440008', 'Street festival fun - Milo is the main attraction! 🎪', 96, 20),
+('post-8-11', '550e8400-e29b-41d4-a716-446655440008', 'Milo s reaction to his first snowfall in the city ❄️', 104, 22),
+('post-8-12', '550e8400-e29b-41d4-a716-446655440008', 'Late night city walks - Milo loves the neon lights ✨', 67, 12),
+
+-- User 9 (happy_tails) - Bella the Poodle
+('post-9-1', '550e8400-e29b-41d4-a716-446655440009', 'Bella s spa day at the grooming salon - living her best life! ✨', 88, 17),
+('post-9-2', '550e8400-e29b-41d4-a716-446655440009', 'Before and after: Bella s summer cut transformation 💇‍♀️', 102, 21),
+('post-9-3', '550e8400-e29b-41d4-a716-446655440009', 'Bella modeling the latest in doggy fashion accessories 👗', 64, 11),
+('post-9-4', '550e8400-e29b-41d4-a716-446655440009', 'Client consultation: Bella demonstrates the perfect poodle pose', 39, 6),
+('post-9-5', '550e8400-e29b-41d4-a716-446655440009', 'Bella s reaction to her nail painting session - pure elegance 💅', 91, 18),
+('post-9-6', '550e8400-e29b-41d4-a716-446655440009', 'Teaching poodle grooming 101: Bella is the star student', 47, 8),
+('post-9-7', '550e8400-e29b-41d4-a716-446655440009', 'Bella s favorite part of grooming day: the blow-dry massage 🌀', 75, 14),
+('post-9-8', '550e8400-e29b-41d4-a716-446655440009', 'Bella wearing her new bow collection - which one suits her best? 🎀', 83, 16),
+('post-9-9', '550e8400-e29b-41d4-a716-446655440009', 'Bella s grooming toolkit inspection - quality control is important!', 31, 5),
+('post-9-10', '550e8400-e29b-41d4-a716-446655440009', 'Bella at the pet expo showing off professional grooming techniques', 56, 10),
+('post-9-11', '550e8400-e29b-41d4-a716-446655440009', 'Bella s winter coat styling - functional and fashionable! 🧥', 69, 12),
+('post-9-12', '550e8400-e29b-41d4-a716-446655440009', 'End of the day: Bella relaxing after a busy day of being gorgeous', 77, 15),
+
+-- User 10 (pet_lover_101) - Charlie the Husky
+('post-10-1', '550e8400-e29b-41d4-a716-446655440010', 'Charlie s snow day: finally weather he was born for! ❄️', 134, 28),
+('post-10-2', '550e8400-e29b-41d4-a716-446655440010', 'Sled pulling practice - Charlie thinks he s training for the Iditarod 🛷', 97, 20),
+('post-10-3', '550e8400-e29b-41d4-a716-446655440010', 'Those blue husky eyes that can melt your heart instantly 💙', 156, 32),
+('post-10-4', '550e8400-e29b-41d4-a716-446655440010', 'Charlie s cooling down strategy: ice cubes and kiddie pools 🧊', 73, 14),
+('post-10-5', '550e8400-e29b-41d4-a716-446655440010', 'Morning jog: Charlie setting the pace at 6 AM sharp 🏃‍♂️', 82, 16),
+('post-10-6', '550e8400-e29b-41d4-a716-446655440010', 'Charlie meeting his first wolf at the wildlife sanctuary 🐺', 189, 41),
+('post-10-7', '550e8400-e29b-41d4-a716-446655440010', 'Husky drama: Charlie s reaction to being told it s bath time 🛁', 143, 29),
+('post-10-8', '550e8400-e29b-41d4-a716-446655440010', 'Charlie s winter gear collection - ready for any adventure! 🧤', 65, 12),
+('post-10-9', '550e8400-e29b-41d4-a716-446655440010', 'Trail running with Charlie: who s training who? 🥾', 91, 18),
+('post-10-10', '550e8400-e29b-41d4-a716-446655440010', 'Charlie s howling practice - the neighbors are so lucky! 🎵', 108, 23),
+('post-10-11', '550e8400-e29b-41d4-a716-446655440010', 'Charlie discovered sledding... now he won t let other dogs have a turn', 76, 15),
+('post-10-12', '550e8400-e29b-41d4-a716-446655440010', 'Charlie s winter photoshoot: professional snow dog model ❄️📸', 125, 26);
+
+-- Continuing with remaining users (11-15)
+INSERT INTO posts (id, user_id, caption, likes_count, comments_count) VALUES
+-- User 11 (cuddle_buddy) - Olive the Cavalier King Charles
+('post-11-1', '550e8400-e29b-41d4-a716-446655440011', 'Olive s definition of productivity: supervising Netflix from my lap 📺', 67, 13),
+('post-11-2', '550e8400-e29b-41d4-a716-446655440011', 'Those Cavalier eyes that get her anything she wants 🥺', 94, 19),
+('post-11-3', '550e8400-e29b-41d4-a716-446655440011', 'Olive s morning routine: stretch, yawn, demand breakfast cuddles', 43, 7),
+('post-11-4', '550e8400-e29b-41d4-a716-446655440011', 'Blanket fort construction: Olive is the chief architect 🏰', 58, 10),
+('post-11-5', '550e8400-e29b-41d4-a716-446655440011', 'Olive discovered the heated blanket... I may never get it back 🔥', 81, 16),
+('post-11-6', '550e8400-e29b-41d4-a716-446655440011', 'Reading buddy Olive makes sure I don t miss any good parts 📖', 35, 6),
+('post-11-7', '550e8400-e29b-41d4-a716-446655440011', 'Olive s reaction to the doorbell: professional lap warmer to guard dog', 72, 14),
+('post-11-8', '550e8400-e29b-41d4-a716-446655440011', 'Sunday afternoon naps: Olive has perfected the art 😴', 89, 17),
+('post-11-9', '550e8400-e29b-41d4-a716-446655440011', 'Olive s favorite spot: anywhere there s a human to snuggle', 51, 9),
+('post-11-10', '550e8400-e29b-41d4-a716-446655440011', 'Movie night setup: Olive claims her spot before the opening credits', 64, 11),
+('post-11-11', '550e8400-e29b-41d4-a716-446655440011', 'Olive s weather report: perfect for indoor snuggling all day ☁️', 76, 15),
+('post-11-12', '550e8400-e29b-41d4-a716-446655440011', 'Olive helping with work-from-home productivity (by being adorable)', 88, 18),
+
+-- User 12 (park_runner) - Dash the Greyhound
+('post-12-1', '550e8400-e29b-41d4-a716-446655440012', 'Dash clocking 30 mph on his morning run - I m still at the starting line! 🏃‍♂️', 145, 31),
+('post-12-2', '550e8400-e29b-41d4-a716-446655440012', 'Greyhound grace: Dash floating across the dog park like poetry', 78, 15),
+('post-12-3', '550e8400-e29b-41d4-a716-446655440012', 'Dash meets a whippet: professional speedster networking session', 92, 18),
+('post-12-4', '550e8400-e29b-41d4-a716-446655440012', 'Post-run recovery: Dash demonstrates the 20-hour nap technique 😴', 103, 21),
+('post-12-5', '550e8400-e29b-41d4-a716-446655440012', 'Dash s racing dreams: backyard zoomies at maximum velocity 💨', 87, 17),
+('post-12-6', '550e8400-e29b-41d4-a716-446655440012', 'Dash wearing his winter coat - fashion meets function for sighthounds', 54, 9),
+('post-12-7', '550e8400-e29b-41d4-a716-446655440012', 'Dash s attention span during training: 3 seconds, then SQUIRREL! 🐿️', 96, 19),
+('post-12-8', '550e8400-e29b-41d4-a716-446655440012', 'Lure coursing practice: Dash channeling his inner race car 🏎️', 119, 24),
+('post-12-9', '550e8400-e29b-41d4-a716-446655440012', 'Dash s energy levels: 0-60 mph in 2.5 seconds, then back to 0', 81, 16),
+('post-12-10', '550e8400-e29b-41d4-a716-446655440012', 'Dash proving that retired racers make the best couch potatoes 🛋️', 107, 22),
+('post-12-11', '550e8400-e29b-41d4-a716-446655440012', 'Dash s morning stretch routine: yoga master in the making 🧘‍♂️', 63, 12),
+('post-12-12', '550e8400-e29b-41d4-a716-446655440012', 'Track day memories: Dash visiting his old racing grounds 🏁', 134, 28),
+
+-- User 13 (tiny_paws) - Peanut the Chihuahua
+('post-13-1', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s big dog energy in a 3-pound package! 💪', 89, 18),
+('post-13-2', '550e8400-e29b-41d4-a716-446655440013', 'That Chihuahua attitude when someone doubts her capabilities 😤', 124, 26),
+('post-13-3', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s winter wardrobe: tiny sweater, maximum fashion 🧥', 67, 13),
+('post-13-4', '550e8400-e29b-41d4-a716-446655440013', 'Peanut confronting the neighbor s Great Dane - fearless! 🐕', 156, 33),
+('post-13-5', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s purse adventures: she fits perfectly and loves the view', 43, 8),
+('post-13-6', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s alarm clock duty: 5 AM sharp, every single day ⏰', 78, 15),
+('post-13-7', '550e8400-e29b-41d4-a716-446655440013', 'Peanut discovered she can fit in the cat bed - territory claimed!', 91, 19),
+('post-13-8', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s reaction to her own reflection: who is that other dog?', 52, 10),
+('post-13-9', '550e8400-e29b-41d4-a716-446655440013', 'Peanut teaching larger dogs the proper way to be spoiled 👑', 105, 22),
+('post-13-10', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s hiding spots: anywhere she fits (which is everywhere)', 64, 12),
+('post-13-11', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s bodyguard duties: protecting me from the mailman 📬', 87, 17),
+('post-13-12', '550e8400-e29b-41d4-a716-446655440013', 'Peanut s spa day: tiny dog, giant personality, royal treatment ✨', 96, 20),
+
+-- User 14 (nature_pup) - Scout the Australian Shepherd  
+('post-14-1', '550e8400-e29b-41d4-a716-446655440014', 'Scout discovered a hidden waterfall on our morning hike! 💦', 112, 23),
+('post-14-2', '550e8400-e29b-41d4-a716-446655440014', 'Those Australian Shepherd eyes scanning the forest for adventure 👀', 93, 19),
+('post-14-3', '550e8400-e29b-41d4-a716-446655440014', 'Scout s trail etiquette: leave only paw prints, take only memories', 76, 14),
+('post-14-4', '550e8400-e29b-41d4-a716-446655440014', 'Scout meeting a family of deer on the mountain trail 🦌', 158, 34),
+('post-14-5', '550e8400-e29b-41d4-a716-446655440014', 'Scout s backpacking gear check: water, treats, and enthusiasm ✅', 64, 11),
+('post-14-6', '550e8400-e29b-41d4-a716-446655440014', 'Scout navigating rocky terrain like the mountain goat he thinks he is 🐐', 89, 17),
+('post-14-7', '550e8400-e29b-41d4-a716-446655440014', 'Scout s weather prediction: perfect for an all-day adventure! ☀️', 47, 8),
+('post-14-8', '550e8400-e29b-41d4-a716-446655440014', 'Scout found the perfect stick collection spot 🪵', 71, 13),
+('post-14-9', '550e8400-e29b-41d4-a716-446655440014', 'Scout s camping skills: tent setup supervisor and s more quality tester', 85, 16),
+('post-14-10', '550e8400-e29b-41d4-a716-446655440014', 'Scout s sunrise yoga session on the mountain peak 🧘‍♂️', 104, 21),
+('post-14-11', '550e8400-e29b-41d4-a716-446655440014', 'Scout tracking wildlife: his nose knows every story in the forest', 67, 12),
+('post-14-12', '550e8400-e29b-41d4-a716-446655440014', 'Scout s adventure journal: 25 trails conquered this season! 📖', 98, 20),
+
+-- User 15 (rescue_mama) - Hope the Mixed Breed
+('post-15-1', '550e8400-e29b-41d4-a716-446655440015', 'Hope s transformation: 6 months of love and she s a new dog! ❤️', 187, 42),
+('post-15-2', '550e8400-e29b-41d4-a716-446655440015', 'Hope s first birthday celebration - we don t know her real age, but today she s one! 🎂', 143, 31),
+('post-15-3', '550e8400-e29b-41d4-a716-446655440015', 'Hope learned to trust again - those tail wags are everything 🐕', 234, 51),
+('post-15-4', '550e8400-e29b-41d4-a716-446655440015', 'Hope s favorite activity: teaching other rescue dogs that humans are good', 156, 34),
+('post-15-5', '550e8400-e29b-41d4-a716-446655440015', 'Hope s first car ride: windows down, ears flying, pure joy! 🚗', 98, 21),
+('post-15-6', '550e8400-e29b-41d4-a716-446655440015', 'Hope discovers toys for the first time - everything is fascinating! 🧸', 121, 26),
+('post-15-7', '550e8400-e29b-41d4-a716-446655440015', 'Hope s progress report: from scared to confident in 3 months 📈', 89, 18),
+('post-15-8', '550e8400-e29b-41d4-a716-446655440015', 'Hope meeting her first puppy friend - gentle giant energy 🐶', 167, 36),
+('post-15-9', '550e8400-e29b-41d4-a716-446655440015', 'Hope s reaction to her first soft bed - she thought it was a trap initially 🛏️', 134, 29),
+('post-15-10', '550e8400-e29b-41d4-a716-446655440015', 'Hope volunteering at the shelter - helping other dogs find hope too', 201, 44),
+('post-15-11', '550e8400-e29b-41d4-a716-446655440015', 'Hope s training graduation: from fear to fearless in 6 months! 🏆', 176, 38),
+('post-15-12', '550e8400-e29b-41d4-a716-446655440015', 'Hope s message: every dog deserves love, patience, and second chances 💕', 289, 67);
