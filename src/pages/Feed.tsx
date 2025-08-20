@@ -4,6 +4,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import PawConnectLogo from '@/components/PawConnectLogo';
 import PetPhotoCard from '@/components/PetPhotoCard';
+import CreatePostDialog from '@/components/CreatePostDialog';
 import { Plus, User, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ const Feed = () => {
   const { user, signOut } = useAuth();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showCreatePost, setShowCreatePost] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -96,6 +98,14 @@ const Feed = () => {
     navigate('/');
   };
 
+  const handleCreatePost = () => {
+    setShowCreatePost(true);
+  };
+
+  const handlePostCreated = () => {
+    fetchPosts(); // Refresh the feed after creating a post
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -131,7 +141,7 @@ const Feed = () => {
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-heading font-bold">Welcome to your feed!</h1>
             <p className="text-muted-foreground">Share your pet's adventures with the community</p>
-            <Button variant="hero" className="gap-2">
+            <Button variant="hero" className="gap-2" onClick={handleCreatePost}>
               <Plus className="h-4 w-4" />
               Create Post
             </Button>
@@ -212,7 +222,7 @@ const Feed = () => {
               </div>
               
               <div className="pt-4">
-                <Button variant="hero" className="gap-2">
+                <Button variant="hero" className="gap-2" onClick={handleCreatePost}>
                   <Plus className="h-4 w-4" />
                   Share Your Pet's First Post
                 </Button>
@@ -236,6 +246,12 @@ const Feed = () => {
           )}
         </div>
       </main>
+
+      <CreatePostDialog
+        open={showCreatePost}
+        onOpenChange={setShowCreatePost}
+        onPostCreated={handlePostCreated}
+      />
     </div>
   );
 };
