@@ -139,8 +139,85 @@ const Feed = () => {
 
           {/* Posts */}
           {posts.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">No posts yet. Be the first to share!</p>
+            <div className="text-center py-12 space-y-6">
+              <div className="space-y-4">
+                <h2 className="text-2xl font-heading font-semibold">Welcome to your PawConnect Feed!</h2>
+                <p className="text-muted-foreground">Your personalized pet community awaits. Here's what you can do:</p>
+              </div>
+              
+              {/* Demo Cards */}
+              <div className="space-y-6 max-w-lg mx-auto">
+                <div className="text-left">
+                  <h3 className="font-heading font-semibold mb-3">Share your pet's moments</h3>
+                  <div className="bg-card rounded-xl p-4 shadow-warm border">
+                    <div className="flex items-start gap-3">
+                      <img 
+                        src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=60" 
+                        alt="Golden Retriever" 
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div className="flex-1">
+                        <p className="font-semibold text-sm">@fluffy_lover</p>
+                        <p className="text-sm text-muted-foreground mt-1">Beautiful morning walk with Fluffy! 🌅</p>
+                        <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
+                          <span>45 likes</span>
+                          <span>8 comments</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-left">
+                  <h3 className="font-heading font-semibold mb-3">Connect with other pet parents</h3>
+                  <div className="bg-card rounded-xl p-4 shadow-warm border">
+                    <div className="flex items-start gap-3">
+                      <img 
+                        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=60" 
+                        alt="Orange cat" 
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div className="flex-1">
+                        <p className="font-semibold text-sm">@whiskers_dad</p>
+                        <p className="text-sm text-muted-foreground mt-1">Whiskers found the perfect sunspot ☀️</p>
+                        <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
+                          <span>34 likes</span>
+                          <span>6 comments</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-left">
+                  <h3 className="font-heading font-semibold mb-3">Get inspiration and tips</h3>
+                  <div className="bg-card rounded-xl p-4 shadow-warm border">
+                    <div className="flex items-start gap-3">
+                      <img 
+                        src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=60" 
+                        alt="Cute rabbit" 
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div className="flex-1">
+                        <p className="font-semibold text-sm">@bunny_mama</p>
+                        <p className="text-sm text-muted-foreground mt-1">Cocoa loves exploring the garden 🌿</p>
+                        <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
+                          <span>23 likes</span>
+                          <span>4 comments</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="pt-4">
+                <Button variant="hero" className="gap-2">
+                  <Plus className="h-4 w-4" />
+                  Share Your Pet's First Post
+                </Button>
+                <p className="text-xs text-muted-foreground mt-2">Start building your pet's profile and connect with the community!</p>
+              </div>
             </div>
           ) : (
             <div className="space-y-6">
