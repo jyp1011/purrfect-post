@@ -23,7 +23,9 @@ const Auth = () => {
     email: '',
     password: '',
     username: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    petName: '',
+    petBreed: ''
   });
 
   const handleSignIn = async (e: React.FormEvent) => {
@@ -63,7 +65,7 @@ const Auth = () => {
 
     setIsLoading(true);
 
-    const { error } = await signUp(signUpForm.email, signUpForm.password, signUpForm.username);
+    const { error } = await signUp(signUpForm.email, signUpForm.password, signUpForm.username, signUpForm.petName, signUpForm.petBreed);
     
     if (error) {
       toast({
@@ -139,6 +141,27 @@ const Auth = () => {
                       value={signUpForm.username}
                       onChange={(e) => setSignUpForm(prev => ({ ...prev, username: e.target.value }))}
                       required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="pet-name">Pet Name</Label>
+                    <Input
+                      id="pet-name"
+                      type="text"
+                      placeholder="What's your pet's name?"
+                      value={signUpForm.petName}
+                      onChange={(e) => setSignUpForm(prev => ({ ...prev, petName: e.target.value }))}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="pet-breed">Pet Breed (optional)</Label>
+                    <Input
+                      id="pet-breed"
+                      type="text"
+                      placeholder="Golden Retriever, Persian Cat, etc."
+                      value={signUpForm.petBreed}
+                      onChange={(e) => setSignUpForm(prev => ({ ...prev, petBreed: e.target.value }))}
                     />
                   </div>
                   <div className="space-y-2">
